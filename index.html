@@ -19,9 +19,10 @@
 </head>
 <body class="roboto-font container mx-auto">
 
-    <header class="mb-5">
+    <header class="mb-1">
         <!-- navbar -->
-     <div class="navbar p-0 bg-base-100 shadow-sm flex-col md:flex-row">
+     <nav>
+      <div class="navbar p-0 bg-base-100 shadow-sm flex-col md:flex-row">
          <div class="navbar-start w-full md:w-1/2">
              <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -47,20 +48,17 @@
           </ul>
          </div>
 
-      <div class="navbar-end w-full  bg-gray-400 justify-start  md:w-1/2 justify-end">
+       <div class="navbar-end w-full border-1 border-gray-900 rounded-xl  bg-gray-400 justify-start  md:w-1/2 justify-end">
         
-             <input type="text" placeholder="Search your city.... "
-            class=" p-2 border-0  w-1/2">
+             <input type="text" placeholder="Search for places.... "
+             class=" p-2 border-0  w-1/2">
+
               <div class="w-1/2  flex justify-end ">
-        
                    <button type="submit" class="p-4 cursor-pointer  "><i class="fa-solid fa-magnifying-glass"></i></button>
               </div>
-  
-   
-   
-  </div>
-    </div>
-
+       </div>
+     </div>
+     </nav>
     </header>
 
 
@@ -68,50 +66,57 @@
     <main  class=" bg-gray-700 text-white">
 
     <!-- current weather section -->
-     <section class="  p-1 md:p-8  lg:p-20  ">
+     <section class="p-2  md:p-8 lg:p-20  ">
      
-      
-      <div class="flex flex-col items-center   md:flex-row md:ml-14 lg:ml-8">
-            <div class="mb-10 ">
-        <h3 class="text-4xl font-bold mb-2 text-center md:text-left">Friday, October 17</h3>
-        <p class="text-3xl text-shadow-black">Mymensingh, Bangladesh</p>
+      <div class=" p-5 mt-10 flex  justify-between items-center lg:p-10 ">
+
+            <div class=" w-3/4 ">
+               <h1 class="text-3xl mb-4 font-bold md:text-5xl lg:text-6xl">Friday, October 17</h1>
+              <p class="text-xl md:text-2xl lg:text-3xl ">Mymensingh, Bangladesh</p>
             </div>
-          <div class="flex items-center justify-center md:justify-end ">
-       <img src="images/cloudy.png" alt="" class="w-1/6 md:w-1/8">
-       <h1 class="text-7xl">27°C</h1>
-            </div>
-      </div>
+
+          <div class="w-1/4 ">
+               <div class="mb-2 flex items-center gap-2">
+                   <img src="images/cloudy.png" alt="" class=" w-1/4 ">
+                   <p class="text-6xl">27°</p>
+              </div>
+         <div  class="text-sky-600 lg:text-2xl">Partly Cloudy</div>
+        </div>
+   </div>
+   
       
-     <div class="mt-28 grid gap-4 justify-center justify-items-center sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
+     <div class="mt-28 grid gap-4 justify-center justify-items-center sm:grid-cols-1    md:grid-cols-2 lg:grid-cols-4 ">
+
       <div class="bg-gray-600 w-54  p-10 rounded-2xl flex items-center gap-5">
-         <div><i class="fa-solid fa-temperature-high text-4xl"></i></div>
-        <div>
-          <h2 class="text-4xl">31°</h2>
-          <p >Feels like</p>
-        </div>
+            <div><i class="fa-solid fa-temperature-high text-4xl"></i></div>
+            <div>
+               <h2 class="text-4xl">31°</h2>
+               <p >Feels like</p>
+            </div>
       </div>
+
       <div class="bg-gray-600 w-54 p-10 rounded-2xl flex items-center gap-5">
-        <img src="images/humidity.png" alt="" class="w-1/4">
-        <div>
-          <h2 class="text-4xl">92%</h2>
-          <p >Humidity</p>
-        </div>
+            <img src="images/humidity.png" alt="" class="w-1/4">
+            <div>
+                <h2 class="text-4xl">92%</h2>
+                <p >Humidity</p>
+             </div>
       </div>
 
        <div class="bg-gray-600 w-54 p-10 rounded-2xl flex items-center gap-5">
-         <div><i class="fa-solid fa-wind text-4xl"></i></div>
-        <div>
-          <h2 class="text-2xl">3 km/h</h2>
-          <p>Wind Speed</p>
-        </div>
+             <div><i class="fa-solid fa-wind text-4xl"></i></div>
+             <div>
+                  <h2 class="text-2xl">3 km/h</h2>
+                  <p>Wind Speed</p>
+            </div>
       </div>
 
-          <div class="bg-gray-600 w-54 p-10 rounded-2xl flex items-center gap-5">
-         <div><i class="fa-solid fa-cloud-rain text-4xl"></i></div>
-        <div>
-          <h2 class="text-3xl">10%</h2>
-          <p>Precipitation</p>
-        </div>
+      <div class="bg-gray-600 w-54 p-10 rounded-2xl flex items-center gap-5">
+               <div><i class="fa-solid fa-cloud-rain text-4xl"></i></div>
+               <div>
+                  <h2 class="text-3xl">10%</h2>
+                  <p>Precipitation</p>
+               </div>
       </div>
      
      </div>
@@ -120,70 +125,80 @@
 
 
      <!-- Hourly forecast section -->
-     <section class=" mt-10 p-2 overflow-x-scroll flex gap-20 md:p-8  lg:p-20    ">
+     <section class=" mt-10 p-2 overflow-x-scroll flex gap-20 md:p-8 lg:p-20    ">
+
          <div class=" text-center flex flex-col items-center justify-center gap-10 ">
-            <div class="text-xl font-bold ">10 AM</div>
-            <div>
+              <div class="text-xl font-bold ">10 AM</div>
+              <div>
                     <img src="images/brightness.png" alt="" class="w-10">
-                   <p class="text-2xl font-bold">27°</p>
+                    <p class="text-2xl font-bold">27°</p>
+              </div>
+         </div>
+
+         <div class=" text-center flex flex-col items-center justify-center gap-10">
+              <div class="text-xl font-bold">11 AM</div>
+              <div>
+                    <img src="images/brightness.png" alt="" class="w-10">
+                    <p class="text-2xl font-bold">29°</p>
+             </div>
+         </div>
+
+         <div class=" text-center flex flex-col items-center justify-center gap-10">
+              <div class="text-xl font-bold">12 AM</div>
+              <div>
+                    <img src="images/brightness.png" alt="" class="w-10">
+                    <p class="text-2xl font-bold">31°</p>
+              </div>
+         </div>
+
+         <div class=" text-center flex flex-col items-center justify-center gap-10">
+             <div class="text-xl font-bold">1 PM</div>
+             <div>
+                    <img src="images/brightness.png" alt="" class="w-10">
+                    <p class="text-2xl font-bold">31°</p>
+             </div>
+         </div>
+
+         <div class=" text-center flex flex-col items-center justify-center gap-10">
+               <div class="text-xl font-bold">2 PM</div>
+               <div>
+                    <img src="images/brightness.png" alt="" class="w-10">
+                    <p class="text-2xl font-bold">31°</p>
+               </div>
+         </div>
+
+         <div class=" text-center flex flex-col items-center justify-center gap-10">
+              <div class="text-xl font-bold">3 PM</div>
+              <div>
+                     <img src="images/brightness.png" alt="" class="w-10">
+                     <p class="text-2xl font-bold">32°</p>
             </div>
          </div>
+
          <div class=" text-center flex flex-col items-center justify-center gap-10">
-            <div class="text-xl font-bold">11 AM</div>
-            <div>
-                    <img src="images/brightness.png" alt="" class="w-10">
-                   <p class="text-2xl font-bold">29°</p>
-            </div>
-         </div>
-         <div class=" text-center flex flex-col items-center justify-center gap-10">
-            <div class="text-xl font-bold">12 AM</div>
-            <div>
-                    <img src="images/brightness.png" alt="" class="w-10">
-                   <p class="text-2xl font-bold">31°</p>
-            </div>
-         </div>
-         <div class=" text-center flex flex-col items-center justify-center gap-10">
-            <div class="text-xl font-bold">1 PM</div>
-            <div>
-                    <img src="images/brightness.png" alt="" class="w-10">
-                   <p class="text-2xl font-bold">31°</p>
-            </div>
-         </div>
-         <div class=" text-center flex flex-col items-center justify-center gap-10">
-            <div class="text-xl font-bold">2 PM</div>
-            <div>
-                    <img src="images/brightness.png" alt="" class="w-10">
-                   <p class="text-2xl font-bold">31°</p>
-            </div>
-         </div>
-         <div class=" text-center flex flex-col items-center justify-center gap-10">
-            <div class="text-xl font-bold">3 PM</div>
-            <div>
+               <div class="text-xl font-bold">4 PM</div>
+               <div>
                     <img src="images/brightness.png" alt="" class="w-10">
                    <p class="text-2xl font-bold">32°</p>
-            </div>
+               </div>
          </div>
-         <div class=" text-center flex flex-col items-center justify-center gap-10">
-            <div class="text-xl font-bold">4 PM</div>
-            <div>
-                    <img src="images/brightness.png" alt="" class="w-10">
-                   <p class="text-2xl font-bold">32°</p>
-            </div>
-         </div>
+
          <div class=" text-center flex flex-col items-center justify-center gap-10">
             <div class="text-xl font-bold">5 PM</div>
             <div>
                     <img src="images/brightness.png" alt="" class="w-10">
-                   <p class="text-2xl font-bold">31°</p>
+                    <p class="text-2xl font-bold">31°</p>
             </div>
          </div>
+
          <div class=" text-center flex flex-col items-center justify-center gap-10">
-            <div class="text-xl font-bold">6 PM</div>
-            <div>
+             <div class="text-xl font-bold">6 PM</div>
+             <div>
                     <img src="images/night.png" alt="" class="w-10">
-                   <p class="text-2xl font-bold">29°</p>
+                    <p class="text-2xl font-bold">29°</p>
             </div>
          </div>
+
          <div class=" text-center flex flex-col items-center justify-center gap-10">
             <div class="text-xl font-bold">7 PM</div>
             <div>
@@ -191,6 +206,7 @@
                    <p class="text-2xl font-bold">28°</p>
             </div>
          </div>
+
          <div class=" text-center flex flex-col items-center justify-center gap-10">
             <div class="text-xl font-bold">8 PM</div>
             <div>
@@ -198,6 +214,7 @@
                    <p class="text-2xl font-bold">27°</p>
             </div>
          </div>
+
          <div class=" text-center flex flex-col items-center justify-center gap-10">
             <div class="text-xl font-bold">9 PM</div>
             <div>
@@ -205,6 +222,7 @@
                    <p class="text-2xl font-bold">27°</p>
             </div>
          </div>
+
          <div class=" text-center flex flex-col items-center justify-center gap-10">
             <div class="text-xl font-bold">10 PM</div>
             <div>
@@ -212,20 +230,23 @@
                    <p class="text-2xl font-bold">27°</p>
             </div>
          </div>
+
          <div class=" text-center flex flex-col items-center justify-center gap-10">
             <div class="text-xl font-bold">11 PM</div>
             <div>
                       <img src="images/night.png" alt="" class="w-10">
-                   <p class="text-2xl font-bold">26°</p>
+                      <p class="text-2xl font-bold">26°</p>
             </div>
          </div>
+
          <div class=" text-center flex flex-col items-center justify-center gap-10">
             <div class="text-xl font-bold">12 AM</div>
             <div>
                     <img src="images/night.png" alt="" class="w-10">
-                   <p class="text-2xl font-bold">26°</p>
+                    <p class="text-2xl font-bold">26°</p>
             </div>
          </div>
+
          <div class=" text-center flex flex-col items-center justify-center gap-10">
             <div class="text-xl font-bold">1 AM</div>
             <div>
@@ -233,6 +254,7 @@
                    <p class="text-2xl font-bold">26°</p>
             </div>
          </div>
+
          <div class=" text-center flex flex-col items-center justify-center gap-10">
             <div class="text-xl font-bold">2 AM</div>
             <div>
@@ -240,6 +262,7 @@
                    <p class="text-2xl font-bold">26°</p>
             </div>
          </div>
+
          <div class=" text-center flex flex-col items-center justify-center gap-10">
             <div class="text-xl font-bold">3 AM</div>
             <div>
@@ -247,6 +270,7 @@
                    <p class="text-2xl font-bold">25°</p>
             </div>
          </div>
+
          <div class=" text-center flex flex-col items-center justify-center gap-10">
             <div class="text-xl font-bold">4 AM</div>
             <div>
@@ -254,13 +278,15 @@
                    <p class="text-2xl font-bold">25°</p>
             </div>
          </div>
+
          <div class=" text-center flex flex-col items-center justify-center gap-10">
             <div class="text-xl font-bold">5 AM</div>
             <div>
                      <img src="images/night.png" alt="" class="w-10">
-                   <p class="text-2xl font-bold">25°</p>
+                     <p class="text-2xl font-bold">25°</p>
             </div>
          </div>
+
          <div class=" text-center flex flex-col items-center justify-center gap-10">
             <div class="text-xl font-bold">6 AM</div>
             <div>
@@ -268,13 +294,15 @@
                    <p class="text-2xl font-bold">24°</p>
             </div>
          </div>
+
          <div class=" text-center flex flex-col items-center justify-center gap-10">
             <div class="text-xl font-bold">7 AM</div>
             <div>
                     <img src="images/brightness.png" alt="" class="w-10">
-                   <p class="text-2xl font-bold">26°</p>
+                    <p class="text-2xl font-bold">26°</p>
             </div>
          </div>
+
          <div class=" text-center flex flex-col items-center justify-center gap-10">
             <div class="text-xl font-bold">8 AM</div>
             <div>
@@ -282,6 +310,7 @@
                    <p class="text-2xl font-bold">26°</p>
             </div>
          </div>
+
          <div class=" text-center flex flex-col items-center justify-center gap-10">
             <div class="text-xl font-bold">9 AM</div>
             <div>
@@ -289,6 +318,7 @@
                    <p class="text-2xl font-bold">27°</p>
             </div>
          </div>
+
          <div class=" text-center flex flex-col items-center justify-center gap-10">
             <div class="text-xl font-bold">10 AM</div>
             <div>
@@ -296,52 +326,63 @@
                    <p class="text-2xl font-bold">27°</p>
             </div>
          </div>
+
      </section>
 
      <!-- 7 day daily forecast cards -->
-      <section class="mt-16 p-2 grid gap-5 lg:gap-1 items-center justify-center  grid-cols-1 md:grid-cols-2 lg:grid-cols-8 md:p-12 ">
-         <div class="flex flex-col items-center justify-center gap-2  p-5 rounded-2xl border-2 border-gray-400 ">
+      <section class="mt-16 p-2 grid gap-5 lg:gap-1 items-center justify-center  grid-cols-1 md:p-12 md:grid-cols-2  lg:grid-cols-8 ">
+
+         <div class=" p-5 flex flex-col items-center justify-center gap-2 rounded-2xl border-2 border-gray-400 ">
             <p>Thu</p>
             <img src="images/brightness.png" alt="sun" class="w-10">
             <p>32°/24°</p>
          </div>
-         <div class="flex flex-col items-center justify-center gap-2 p-5 rounded-2xl border-2 border-gray-400 ">
+
+         <div class=" p-5 flex flex-col items-center justify-center gap-2 rounded-2xl border-2 border-gray-400 ">
             <p>Fri</p>
             <img src="images/brightness.png" alt="sun" class="w-10">
             <p>33°/24°</p>
          </div>
-         <div class="flex flex-col items-center justify-center gap-2 p-5 rounded-2xl border-2 border-gray-400">
+
+         <div class=" p-5 flex flex-col items-center justify-center gap-2  rounded-2xl border-2 border-gray-400">
             <p>Sat</p>
             <img src="images/brightness.png" alt="sun" class="w-10">
             <p>34°/24°</p>
          </div>
-         <div class="flex flex-col items-center justify-center gap-2 p-5 rounded-2xl border-2 border-gray-400">
+
+         <div class="p-5 flex flex-col items-center justify-center gap-2  rounded-2xl border-2 border-gray-400">
             <p>Sun</p>
             <img src="images/brightness.png" alt="sun" class="w-10">
             <p>33°/24°</p>
          </div>
-         <div class="flex flex-col items-center justify-center gap-2 p-5 rounded-2xl border-2 border-gray-400">
+
+         <div class="p-5 flex flex-col items-center justify-center gap-2  rounded-2xl border-2 border-gray-400">
             <p>Mon</p>
             <img src="images/cs.png" alt="sun" class="w-10">
             <p>33°/23°</p>
          </div>
-         <div class="flex flex-col items-center justify-center gap-2 p-5 rounded-2xl border-2 border-gray-400">
+
+         <div class="p-5 flex flex-col items-center justify-center gap-2  rounded-2xl border-2 border-gray-400">
             <p>Tues</p>
             <img src="images/brightness.png" alt="sun" class="w-10">
             <p>34°/23°</p>
          </div>
-         <div class="flex flex-col items-center justify-center gap-2 p-5 rounded-2xl border-2 border-gray-400">
+
+         <div class="p-5 flex flex-col items-center justify-center gap-2  rounded-2xl border-2 border-gray-400">
             <p>Wed</p>
             <img src="images/cs.png" alt="sun" class="w-10">
             <p>33°/23°</p>
          </div>
-         <div class="flex flex-col items-center justify-center gap-2 p-5 rounded-2xl border-2 border-gray-400">
+
+         <div class=" p-5 flex flex-col items-center justify-center gap-2  rounded-2xl border-2 border-gray-400">
             <p>Thus</p>
             <img src="images/cs.png" alt="sun" class="w-10">
             <p>32°/24°</p>
          </div>
+
       </section>
   
     </main>
+    
 </body>
 </html>
